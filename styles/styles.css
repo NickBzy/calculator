@@ -1,0 +1,94 @@
+body {
+    height: 100vh;
+    background-color: #F6F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    background-color: #BDB395;
+    aspect-ratio: 2/3;
+    flex: 0 1 400px;
+    border-radius: 24px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.top-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 0 1 100%;
+    min-width: 100%;
+    max-height: 10%;
+}
+
+.top-part h3 {
+    margin: 0;
+}
+
+.solar-panel {
+    width: 35%;
+    aspect-ratio: 3/1;
+    border-radius: 24px;
+    background-color: black;
+    align-self: flex-start;
+    box-shadow: 4px 4px 4px rgb(39, 38, 38);
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 90%;
+    aspect-ratio: 3/1;
+    background-color: #F2E2B1;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.display-value {
+    font-size: 48px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    flex: 1;
+    gap: 10px; /* vertical space between buttons */
+}
+
+button {
+    font-size: 20px;
+    border-radius: 16px;
+    background-color: #F2E2B1;
+}
+
+button:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.top-row, .row-1, .row-2, .row-3, .row-4 {
+    height: 20%;
+    display: flex;
+    gap: 10px; /* horizontal space between buttons */
+}
+
+.top-row button{
+    width: 50%;
+}
+
+.row-1 button, .row-2 button, .row-3 button, .row-4 button {
+    width: 25%;
+}
