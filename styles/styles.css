@@ -40,14 +40,16 @@ body {
     border-radius: 24px;
     background-color: black;
     align-self: flex-start;
-    box-shadow: 4px 4px 4px rgb(39, 38, 38);
+    box-shadow: 0px 0px 4px rgb(39, 38, 38);
 }
 
 .display {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     width: 90%;
+    max-height: 105px;
     aspect-ratio: 3/1;
     background-color: #F2E2B1;
     border: 3px solid black;
@@ -56,8 +58,16 @@ body {
     box-sizing: border-box;
 }
 
+.display .formula {
+    height: 30%;
+}
+
+.display .value {
+    height: 70%;
+}
+
 .display-value {
-    font-size: 48px;
+    font-size: 40px;
 }
 
 .buttons {
