@@ -63,19 +63,25 @@ const displayValue = document.querySelector(".display-value");
 const allNumbers = document.querySelectorAll(".number");
 allNumbers.forEach(button => {
     button.addEventListener("click", function(){
+        const currentValue = displayValue.innerText;
+        const newValue = button.textContent;
+
         if (shouldResetDisplay) {
-            displayValue.innerText = button.textContent;
+            displayValue.innerText = newValue;
             shouldResetDisplay = false;
 
-            if (operator === null){
+            if (operator === null) {
                 number1 = null;
             }
         }
-        else if (displayValue.innerText=== '0' && button.textContent !== '.') {
-            displayValue.innerText = button.textContent;
+        else if (newValue === '.' && currentValue.includes('.')) {
+            return;
         }
-        else if (displayValue.innerText.length <11){
-            displayValue.innerText += button.textContent;
+        else if (currentValue === '0' && newValue !== '.') {
+            displayValue.innerText = newValue;
+        }
+        else if (currentValue.length < 11) {
+            displayValue.innerText += newValue;
         }
 
         operatorClicked = false;
