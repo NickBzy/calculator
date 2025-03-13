@@ -66,6 +66,10 @@ allNumbers.forEach(button => {
         if (shouldResetDisplay) {
             displayValue.innerText = button.textContent;
             shouldResetDisplay = false;
+
+            if (operator === null){
+                number1 = null;
+            }
         }
         else if (displayValue.innerText=== '0' && button.textContent !== '.') {
             displayValue.innerText = button.textContent;
@@ -131,5 +135,7 @@ equalButton.addEventListener("click", function(){
     number2 = null;
     operator = null;
     displayValue.innerText = number1;
+    shouldResetDisplay = true;
+    number1 = null;
     }
 });
